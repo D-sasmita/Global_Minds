@@ -6,4 +6,32 @@ By joining our platform, you will connect with like-minded individuals and organ
 
 Our community is built on the belief that collective action can make a difference. Whether you're an experienced professional, a passionate student, or simply someone eager to contribute, your unique perspective and expertise are invaluable in this journey. Together, we can unlock the potential of diverse ideas and approaches, inspiring each other to think creatively and act decisively.
 
+
+Collection of Tools, Technologies, and Frameworks Used
+
+Frontend: HTML, Bootstrap CSS, JavaScript
+Backend: PHP
+Database: crowd_sourcing
+Development Tools: Sublime Text[online code editor], XAMPP
+API Testing: Postman
+
+Installation Instructions & Steps to Run the Project
+Prerequisites:
+
+Ensure you have XAMPP installed on your system.
+Ensure Sublime Text is installed for editing files.
+Clone the Repository: (If applicable, provide the repository link)
+Set Up XAMPP:
+Start XAMPP Control Panel.
+Start the Apache and MySQL services.
+Move Project Files:
+Copy the project files into the htdocs directory of your XAMPP installation.
+Set Up the Database:
+Open phpMyAdmin by navigating to http://localhost/phpmyadmin.
+Create a new database and import the provided SQL scripts (if applicable).
+Access the Project:
+Open your web browser and navigate to http://localhost/[Global_Minds].
+
 Let’s unite our efforts and resources to create sustainable solutions that not only address today’s challenges but also pave the way for a brighter future for generations to come. Join us and be part of the movement toward a better tomorrow!
+
+
