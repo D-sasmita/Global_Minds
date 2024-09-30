@@ -30,7 +30,7 @@ Set Up the Database:
 Open phpMyAdmin by navigating to http://localhost/phpmyadmin.
 Create a new database and import the provided SQL scripts (if applicable).
 Access the Project:
-Open your web browser and navigate to http://localhost/[Global_Minds].
+Open your web browser and navigate to http://localhost/Global_Minds.
 
 Let’s unite our efforts and resources to create sustainable solutions that not only address today’s challenges but also pave the way for a brighter future for generations to come. Join us and be part of the movement toward a better tomorrow!
 
