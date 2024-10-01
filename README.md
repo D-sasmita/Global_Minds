@@ -35,3 +35,4 @@ Open your web browser and navigate to http://localhost/Global_Minds.
 Let’s unite our efforts and resources to create sustainable solutions that not only address today’s challenges but also pave the way for a brighter future for generations to come. Join us and be part of the movement toward a better tomorrow!
 
 
+postman workspace api link- https://api.postman.com/collections/38536376-7ab16aec-bea6-4fb7-8589-2906c3e1f20e?access_key=PMAT-01J93GXYMQBDBZK8173PGZTZPQ
