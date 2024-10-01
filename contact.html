@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-size: cover;
+        }
+        .overlay {
+            background: rgba(0, 0, 50, 0.7);
+            background-image: url('contact.jpeg');
+            background-size: cover; 
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .contact-section {
+            color: white;
+            padding: 50px 0;
+        }
+        .form-control {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ccc;
+            color: #333;
+        }
+        .form-control::placeholder {
+            color: #666;
+        }
+        .btn-primary {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        .btn-primary:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+        .btn-secondary {
+            background-color: #17a2b8;
+            border-color: #17a2b8;
+        }
+        .btn-secondary:hover {
+            background-color: #138496;
+            border-color: #117a8b;
+        }
+        .navbar-custom {
+            background-color: #343a40;
+        }
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link {
+            color: #ffffff;
+        }
+        .navbar-custom .nav-link:hover {
+            color: #d4d4d4;
+        }
+        .navbar-custom .btn-custom {
+            color: #ffffff;
+            background-color: #007bff;
+            border: none;
+            margin-left: 20px;
+            margin-right: 10px;
+        }
+        .navbar-custom .btn-custom:hover {
+            background-color: #0056b3;
+        }
+        .navbar-brand img {
+            width: 240px; 
+            height: 100px;
+        }
+        .navbar-collapse {
+            margin-left: 400px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <a class="navbar-brand" href="#">
+                <img src="apilogo.png" alt="Logo"> 
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="solver.html">Participate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="challenge.html">Challenges</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="solutions.html">Solution</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="submit_news.html">Social News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <a href="index.html" class="btn btn-custom">Sign Up / Log In</a>
+            </div>
+        </nav>
+    </header>
+    <br><br>
+    <div class="overlay"></div>
+    <div class="container contact-section" style="height: 400px;">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Contact</h2>
+                <p>4671 Sugar Camp Road,<br>Owatonna, Minnesota,<br>66080</p>
+                <p>Phone: 507-475-60945-8094</p>
+                <p>Email: <a href="mailto:wrub7d78i0e@temporary-mail.net" class="text-info">wrub7d78i0e@temporary-mail.net</a></p>
+            </div>
+            <div class="col-md-6">
+                <h2>Send Message</h2>
+                <form action="submit_contact.php" method="POST">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" class="form-control" name="fullName" id="fullName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Type your Message...</label>
+                        <textarea class="form-control" name="message" id="message" rows="4" placeholder="Enter your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Check if the URL has the success parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('success')) {
+            alert("Message submitted successfully!");
+        }
+    </script>
+</body>
+</html>

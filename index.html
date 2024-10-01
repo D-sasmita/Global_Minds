@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowd Sourcing Platform</title>
+    <style>
+         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+            background-color: rgb(240, 255, 255);
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .heading {
+            color: #4682B4;
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .container {
+            height: 600px;
+            width: 500px;
+            background-color: white;
+            box-shadow: 8px 8px 20px rgb(169, 169, 169);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn {
+            height: 60px;
+            width: 300px;
+            margin: 20px auto;
+            box-shadow: 10px 10px 30px #D8BFD8;
+            border-radius: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .login,
+        .signup {
+            font-size: 22px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .slider {
+            height: 60px;
+            width: 150px;
+            border-radius: 50px;
+            background-image: linear-gradient(to right, #6A5ACD, #FF69B4);
+            position: absolute;
+            top: 20px;
+            left: 100px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .moveslider {
+            left: 250px;
+        }
+
+        .form-section {
+            height: 500px;
+            width: 1000px;
+            padding: 20px 0;
+            display: flex;
+            position: relative;
+            transition: all 0.5s ease-in-out;
+            left: 0px;
+        }
+
+        .form-section-move {
+            left: -500px;
+        }
+
+        .login-box,
+        .signup-box {
+            height: 100%;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 40px;
+        }
+
+        .ele {
+            height: 60px;
+            width: 400px;
+            outline: none;
+            border: none;
+            color: rgb(77, 77, 77);
+            background-color: #F0F8FF;
+            border-radius: 50px;
+            padding-left: 30px;
+            font-size: 18px;
+        }
+
+        .clkbtn {
+            height: 60px;
+            width: 150px;
+            border-radius: 50px;
+            background-image: linear-gradient(to right, #00FA9A, #7B68EE);
+            font-size: 22px;
+            border: none;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 650px) {
+            .container {
+                height: 600px;
+                width: 300px;
+            }
+
+            .btn {
+                height: 50px;
+                width: 200px;
+            }
+
+            .slider {
+                height: 50px;
+                width: 100px;
+                left: 50px;
+            }
+
+            .moveslider {
+                left: 150px;
+            }
+
+            .form-section {
+                height: 500px;
+                width: 600px;
+            }
+
+            .form-section-move {
+                left: -300px;
+            }
+
+            .login-box,
+            .signup-box {
+                width: 300px;
+            }
+
+            .ele {
+                height: 50px;
+                width: 250px;
+            }
+
+            .clkbtn {
+                height: 50px;
+                width: 130px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="heading">Crowd Sourcing Platform</h1>
+    </header>
+    <div class="container">
+        <div class="slider"></div>
+        <div class="btn">
+            <button class="login">Login</button>
+            <button class="signup">Signup</button>
+        </div>
+
+        <div class="form-section">
+            <div class="login-box">
+                <form id="login-form" method="POST" action="login.php">
+                    <input type="email" class="email ele" placeholder="youremail@email.com" name="email" required><br><br>
+                    <input type="password" class="password ele" placeholder="password" name="password" required><br><br>
+                    <center><button type="submit" class="clkbtn">Login</button></center>
+                </form>
+            </div>
+            <div class="signup-box">
+                <form id="signup-form" method="POST" action="signup.php" onsubmit="return handleSignup(event)">
+                    <input type="text" class="name ele" placeholder="Enter your name" name="name" required><br><br>
+                    <input type="email" class="email ele" placeholder="youremail@email.com" name="email" required><br><br>
+                    <input type="password" class="password ele" placeholder="password" name="password" required><br><br>
+                    <center><button type="submit" class="clkbtn">Signup</button></center>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let signup = document.querySelector(".signup");
+        let login = document.querySelector(".login");
+        let slider = document.querySelector(".slider");
+        let formSection = document.querySelector(".form-section");
+
+        signup.addEventListener("click", () => {
+            slider.classList.add("moveslider");
+            formSection.classList.add("form-section-move");
+        });
+
+        login.addEventListener("click", () => {
+            slider.classList.remove("moveslider");
+            formSection.classList.remove("form-section-move");
+        });
+
+
+        function handleSignup(event) {
+            event.preventDefault(); 
+            const formData = new FormData(event.target); 
+
+            fetch(event.target.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+
+                    window.location.href = "home.html";
+                } else {
+                    alert(data.error); 
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+
+        const loginForm = document.getElementById("login-form");
+        loginForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target); 
+
+            fetch(event.target.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    alert(data.error); 
+                } else {
+                    window.location.href = "home.html";
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+
+</body>
+</html>

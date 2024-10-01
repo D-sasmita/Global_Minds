@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions | Global Minds</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color:#f0f8ff;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .card-footer {
+            background-color: #f8f9fa;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .btn-info {
+            background-color: #0069d9;
+            border: none;
+            font-size: 1rem;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-info:hover {
+            background-color: #0056b3;
+        }
+
+        .badge {
+            font-size: 0.9rem;
+        }
+
+        .header-section {
+            padding: 20px 0;
+        }
+
+        h1, p {
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        .filter-input {
+            margin-bottom: 20px;
+        }
+        .navbar-custom {
+            background-color: #343a40;
+        }
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link {
+            color: #ffffff;
+        }
+        .navbar-custom .nav-link:hover {
+            color: #d4d4d4;
+        }
+        .navbar-custom .btn-custom {
+            color: #ffffff;
+            background-color: #007bff;
+            border: none;
+            margin-left: 20px;
+            margin-right: 10px;
+        }
+        .navbar-custom .btn-custom:hover {
+            background-color: #0056b3;
+        }
+        .navbar-brand img {
+            width: 240px; 
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" href="#">
+            <img src="apilogo.png" alt="Logo" > 
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="solver.html">Participate</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="challenge.html">Challenges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="solutions.html">Solution</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="submit_news.html">Social News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+            <a href="index.html" class="btn btn-custom">Sign Up / Log In</a>
+        </div>
+    </nav>
+    </header>
+
+    <header class="header-section text-black text-center">
+        <h1>Innovative Solutions</h1>
+        <p>Discover ideas submitted by our community and vote on the best solutions.</p>
+    </header>
+    <br><br>
+     <section class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Solution Card 1 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Solar Water Purifier</h5>
+                        <p class="card-text">A portable solar-powered device to purify contaminated water in remote areas.</p>
+                        <span class="badge bg-success">Sustainability</span>
+                    </div>
+                    <div class="card-footer">
+                        <p>Votes: 120 | Comments: 10</p>
+                        <a href="solution4.html" class="btn btn-info">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Solution Card 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Biodegradable Packaging</h5>
+                        <p class="card-text">An eco-friendly packaging solution made from biodegradable materials.</p>
+                        <span class="badge bg-success">Sustainability</span>
+                    </div>
+                    <div class="card-footer">
+                        <p>Votes: 95 | Comments: 8</p>
+                        <a href="solution1.html" class="btn btn-info">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Solution Card 3 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Affordable Solar Lights</h5>
+                        <p class="card-text">Low-cost solar-powered lights to bring electricity to rural communities.</p>
+                        <span class="badge bg-success">Energy</span>
+                    </div>
+                    <div class="card-footer">
+                        <p>Votes: 150 | Comments: 12</p>
+                        <a href="solution2.html" class="btn btn-info">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Solution Card 4 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Waste-to-Energy System</h5>
+                        <p class="card-text">A system that converts waste materials into renewable energy sources.</p>
+                        <span class="badge bg-success">Waste Management</span>
+                    </div>
+                    <div class="card-footer">
+                        <p>Votes: 180 | Comments: 14</p>
+                        <a href="solution3.html" class="btn btn-info">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="solution-list">
+            <!-- Solution cards will be injected here by JavaScript -->
+        </div>
+    </section>
+
+    <section class="container mt-5">
+        <h2 class="text-center">Submit Your Solution</h2>
+        <div class="mb-3">
+            <label for="solutionTitle" class="form-label">Solution Title</label>
+            <input type="text" class="form-control" id="solutionTitle" placeholder="Enter solution title" required>
+        </div>
+        <div class="mb-3">
+            <label for="solutionDescription" class="form-label">Solution Description</label>
+            <textarea class="form-control" id="solutionDescription" rows="3" placeholder="Enter solution description" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="solutionCategory" class="form-label">Solution Category</label>
+            <input type="text" class="form-control" id="solutionCategory" placeholder="Enter solution category" required>
+        </div>
+        <button class="btn btn-primary" style="background-color:green" onclick="submitSolution()">Submit Solution</button>
+    </section>
+
+    <script>
+
+        function fetchSolutions() {
+            fetch('solutions_api.php')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        const solutionsContainer = document.getElementById('solution-list');
+                        solutionsContainer.innerHTML = ''; // Clear existing content
+                        data.data.forEach(solution => {
+                            solutionsContainer.innerHTML += `
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">${solution.title}</h5>
+                                            <p class="card-text">${solution.description}</p>
+                                            <span class="badge bg-success">${solution.category}</span>
+                                        </div>
+                                        <div class="card-footer">
+                                            <p>Votes: ${solution.votes} | Comments: ${solution.comments}</p>
+                                            <a href="solution-details.html" class="btn btn-info">View Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                        });
+                    }
+                })
+                .catch(error => console.error('Error fetching solutions:', error));
+        }
+
+
+        function submitSolution() {
+            const title = document.getElementById('solutionTitle').value;
+            const description = document.getElementById('solutionDescription').value;
+            const category = document.getElementById('solutionCategory').value;
+
+            const data = {
+                title: title,
+                description: description,
+                category: category
+            };
+
+            fetch('solutions_api.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data); // Log the response
+                alert(data.message); // Alert the response message
+                fetchSolutions(); // Refresh the solutions list
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Error occurred while submitting solution');
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchSolutions);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
